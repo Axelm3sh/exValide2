@@ -3,7 +3,14 @@
 	<set path = "images" />
 	<atlas>
 		<image file="anim.png" cols = "8" />
-		<image file="button.png"/>		
+		<image file="button.png"/>
+		<image file="Players_SpriteSheet.png" cols = "27" rows = "12" />
+	</atlas>
+	
+	<set path = "images/background" />
+	<atlas>
+		<image file="BG_Backdrops.png" cols = "4" rows = "4" />
+		<image file="BG_Tiles_And_Masks.png" cols = "8" rows = "15" />
 	</atlas>
 	
 	<set path = "fonts" />
