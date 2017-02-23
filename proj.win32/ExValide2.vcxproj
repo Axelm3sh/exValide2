@@ -113,11 +113,11 @@
   <ItemGroup>
     <ClCompile Include="../src/example.cpp" />
     <ClCompile Include="../src/main.cpp" />
-    <ClCompile Include="PlayerSprite.cpp" />
+    <ClCompile Include="..\src\PlayerSprite.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="../src/example.h" />
-    <ClInclude Include="PlayerSprite.h" />
+    <ClInclude Include="..\src\PlayerSprite.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -21,7 +21,7 @@
     <ClCompile Include="../src/main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PlayerSprite.cpp">
+    <ClCompile Include="..\src\PlayerSprite.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -29,7 +29,7 @@
     <ClInclude Include="../src/example.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PlayerSprite.h">
+    <ClInclude Include="..\src\PlayerSprite.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

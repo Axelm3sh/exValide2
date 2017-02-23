@@ -13,5 +13,7 @@ public:
 protected:
 	//overloaded doUpdate
 	void doUpdate(const UpdateState &us);
+
+private:
 };
 
