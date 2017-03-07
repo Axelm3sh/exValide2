@@ -22,7 +22,7 @@ void tweenDoneHandle(Event* e)
 		//get stage center for Y-position and quickly tween to it
 		image->addTween(Actor::TweenY(getStage()->getSize().y / 2), 100, 1);
 	}
-	image->setAnimFrame(gameResources.getResAnim("Players_SpriteSheet"), 17, 11);
+	//image->setAnimFrame(gameResources.getResAnim("Players_SpriteSheet"), 17, 11);
 }
 //Gets called on clicks
 void onClickFunction(Event* e)
@@ -32,7 +32,7 @@ void onClickFunction(Event* e)
 	float distToMove = -100.f; //units
 	int timeToMove = 400; //ms
 
-	image->setAnimFrame(gameResources.getResAnim("Players_SpriteSheet"), 16, 11);
+	//image->setAnimFrame(gameResources.getResAnim("Players_SpriteSheet"), 16, 11);
 
 	//Tween Y dist, add smooth translation
 	spTween tweenPos = image->addTween(Actor::TweenY(image->getY() + distToMove), timeToMove);
@@ -54,7 +54,7 @@ void example_init()
 
 	image = new PlayerSprite();
 	//Init sprite, note-- 0 base array
-	image->setResAnim(gameResources.getResAnim("Players_SpriteSheet"), 17, 11);
+	//image->setResAnim(gameResources.getResAnim("Players_SpriteSheet"), 17, 11);
 	image->attachTo(getStage());
 	image->setPosition(getStage()->getSize() / 2); //Center on screen
 
@@ -67,6 +67,7 @@ void example_init()
 //called each frame from main.cpp
 void example_update()
 {
+	
 }
 
 //called each frame from main.cpp

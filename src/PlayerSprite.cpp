@@ -4,14 +4,30 @@
 
 PlayerSprite::PlayerSprite()
 {
+	setPlrCardinal(DOWN);
 	//TODO - image construct
-	
+	localRes.loadXML("res.xml");
+	setResAnim(localRes.getResAnim("Players_SpriteSheet"), 17, 11);
 }
 
 
 PlayerSprite::~PlayerSprite()
 {
+	localRes.free(); //frees res
+}
 
+//Return current Cardinal Direction
+PlayerSprite::Cardinal PlayerSprite::getPlrCardinal()
+{
+	return plrDirection;
+}
+
+void PlayerSprite::setPlrCardinal(Cardinal dir)
+{
+	if (plrDirection != dir)
+	{
+		plrDirection = dir;
+	}
 }
 
 void PlayerSprite::doUpdate(const UpdateState & us)
@@ -23,12 +39,31 @@ void PlayerSprite::doUpdate(const UpdateState & us)
 
 	Vector2 pos = getPosition();
 
-	if (data[SDL_SCANCODE_A]) pos.x -= speed;
-	if (data[SDL_SCANCODE_D]) pos.x += speed;
-	if (data[SDL_SCANCODE_W]) pos.y -= speed;
-	if (data[SDL_SCANCODE_S]) pos.y += speed;
+	if (data[SDL_SCANCODE_A])
+	{
+		pos.x -= speed;
+		setPlrCardinal(LEFT);
+		log::message("LEFT");
+	}
+	if (data[SDL_SCANCODE_D])
+	{
+		pos.x += speed;
+		setPlrCardinal(RIGHT);
+		log::message("RIGHT");
+	}
+	if (data[SDL_SCANCODE_W]) 
+	{
+		pos.y -= speed;
+		setPlrCardinal(UP);
+		log::message("UP");
+	}
+	if (data[SDL_SCANCODE_S])
+	{
+		pos.y += speed;
+		setPlrCardinal(DOWN);
+		log::message("DOWN");
+	}
 
-	spTween posTween = addTween(Actor::TweenPosition(pos)); //TODO
 	setPosition(pos);
 
 }
