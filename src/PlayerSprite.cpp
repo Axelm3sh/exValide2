@@ -7,7 +7,9 @@ PlayerSprite::PlayerSprite()
 	setPlrCardinal(DOWN);
 	//TODO - image construct
 	localRes.loadXML("res.xml");
-	setResAnim(localRes.getResAnim("Players_SpriteSheet"), 17, 11);
+	spriteCol = 17;
+	spriteRow = 0;
+	setResAnim(localRes.getResAnim("Players_SpriteSheet"), spriteCol, spriteRow);
 }
 
 
@@ -28,6 +30,8 @@ void PlayerSprite::setPlrCardinal(Cardinal dir)
 	{
 		plrDirection = dir;
 	}
+	
+	//Update sprite to fit direction
 }
 
 void PlayerSprite::doUpdate(const UpdateState & us)

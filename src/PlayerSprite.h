@@ -16,6 +16,11 @@ class PlayerSprite : public Sprite
 		LEFT
 	};
 
+	//int frameArray[12][2] = 
+	//{
+	//	{}
+	//}
+
 public:
 	PlayerSprite();
 	~PlayerSprite();
@@ -30,5 +35,7 @@ protected:
 private:
 	Cardinal plrDirection;
 	Resources localRes;
+	int spriteCol;
+	int spriteRow;
 };
 
