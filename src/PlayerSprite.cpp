@@ -4,12 +4,26 @@
 
 PlayerSprite::PlayerSprite()
 {
-	setPlrCardinal(DOWN);
-	//TODO - image construct
+	setPlrCardinal(WALKDOWN); //Default spawn Cardinal
+	bIsMoving = false;
+	frame = 0;
+
 	localRes.loadXML("res.xml");
-	spriteCol = 17;
-	spriteRow = 0;
-	setResAnim(localRes.getResAnim("Players_SpriteSheet"), spriteCol, spriteRow);
+
+	//Default sprite
+	setResAnim(localRes.getResAnim("Players_SpriteSheet"), playerState, playerClass);
+}
+
+PlayerSprite::PlayerSprite(PClass character, PCharState state)
+{
+	//setPlrCardinal(WALKDOWN); //Default spawn Cardinal
+	bIsMoving = false;
+	frame = 0;
+
+	localRes.loadXML("res.xml");
+
+	//Default sprite
+	setResAnim(localRes.getResAnim("Players_SpriteSheet"), state, character);
 }
 
 
@@ -19,19 +33,24 @@ PlayerSprite::~PlayerSprite()
 }
 
 //Return current Cardinal Direction
-PlayerSprite::Cardinal PlayerSprite::getPlrCardinal()
+PlayerSprite::PCharState PlayerSprite::getPlrCardinal()
 {
-	return plrDirection;
+	return ;
 }
 
-void PlayerSprite::setPlrCardinal(Cardinal dir)
+void PlayerSprite::setPlrCardinal(PCharState dir)
 {
-	if (plrDirection != dir)
+	if (playerState != dir)
 	{
-		plrDirection = dir;
+		playerState = dir;
 	}
 	
 	//Update sprite to fit direction
+}
+
+PlayerSprite::PCharState PlayerSprite::getPlayerState()
+{
+	return playerState;
 }
 
 void PlayerSprite::doUpdate(const UpdateState & us)
@@ -46,28 +65,54 @@ void PlayerSprite::doUpdate(const UpdateState & us)
 	if (data[SDL_SCANCODE_A])
 	{
 		pos.x -= speed;
-		setPlrCardinal(LEFT);
+		setPlrCardinal(WALKLEFT);
+		bIsMoving = true;
 		log::message("LEFT");
 	}
 	if (data[SDL_SCANCODE_D])
 	{
 		pos.x += speed;
-		setPlrCardinal(RIGHT);
+		setPlrCardinal(WALKRIGHT);
+		bIsMoving = true;
 		log::message("RIGHT");
 	}
 	if (data[SDL_SCANCODE_W]) 
 	{
 		pos.y -= speed;
-		setPlrCardinal(UP);
+		setPlrCardinal(WALKUP);
+		bIsMoving = true;
 		log::message("UP");
 	}
 	if (data[SDL_SCANCODE_S])
 	{
 		pos.y += speed;
-		setPlrCardinal(DOWN);
+		setPlrCardinal(WALKDOWN);
+		bIsMoving = true;
 		log::message("DOWN");
 	}
 
+	//TODO: Check keys for nothing pressed
+	UpdateSpriteLayer(us);
 	setPosition(pos);
+
+}
+
+void PlayerSprite::UpdateSpriteLayer(const UpdateState & us)
+{
+	dtFrameAccumulator += us.dt; //count delta time
+
+	if (dtFrameAccumulator >= 1.0f)
+	{
+		frame++; //increment frame number
+		if (frame > 1)
+		{
+			frame = 0;
+		}
+		dtFrameAccumulator = 0.0f; //Reset frame accumulator
+	}
+	
+	//getPlayerState()
+	//TODO Check keystates, update accordingly
+	setResAnim(localRes.getResAnim("Players_SpriteSheet"), playerState + frame, playerClass);
 
 }
