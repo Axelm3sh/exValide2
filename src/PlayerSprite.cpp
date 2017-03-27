@@ -7,6 +7,7 @@ PlayerSprite::PlayerSprite()
 	setPlrCardinal(WALKDOWN); //Default spawn Cardinal
 	bIsMoving = false;
 	frame = 0;
+	dtFrameAccumulator = 0;
 
 	localRes.loadXML("res.xml");
 
@@ -19,6 +20,7 @@ PlayerSprite::PlayerSprite(PClass character, PCharState state)
 	//setPlrCardinal(WALKDOWN); //Default spawn Cardinal
 	bIsMoving = false;
 	frame = 0;
+	dtFrameAccumulator = 0;
 
 	localRes.loadXML("res.xml");
 
@@ -35,7 +37,8 @@ PlayerSprite::~PlayerSprite()
 //Return current Cardinal Direction
 PlayerSprite::PCharState PlayerSprite::getPlrCardinal()
 {
-	return ;
+	//Todo: return only cardinal directions
+	return playerState;
 }
 
 void PlayerSprite::setPlrCardinal(PCharState dir)
@@ -45,6 +48,7 @@ void PlayerSprite::setPlrCardinal(PCharState dir)
 		playerState = dir;
 	}
 	
+
 	//Update sprite to fit direction
 }
 
@@ -61,6 +65,8 @@ void PlayerSprite::doUpdate(const UpdateState & us)
 	float speed = 50.0f * (us.dt / 1000.0f);
 
 	Vector2 pos = getPosition();
+
+	bIsMoving = false; //If we didn't press any keys, this stays false.
 
 	if (data[SDL_SCANCODE_A])
 	{
@@ -97,18 +103,27 @@ void PlayerSprite::doUpdate(const UpdateState & us)
 
 }
 
-void PlayerSprite::UpdateSpriteLayer(const UpdateState & us)
+void PlayerSprite::UpdateSpriteLayer(const UpdateState us)
 {
-	dtFrameAccumulator += us.dt; //count delta time
+	dtFrameAccumulator += (us.dt / 1000.0f); //count delta time
+	std::string time = std::to_string(dtFrameAccumulator);
+	log::messageln(time.c_str());
 
-	if (dtFrameAccumulator >= 1.0f)
+	if (bIsMoving) //if player is moving, do the update for frames
 	{
-		frame++; //increment frame number
-		if (frame > 1)
+		if (dtFrameAccumulator >= 0.5f)
 		{
-			frame = 0;
+			frame++; //increment frame number
+			if (frame > 1)
+			{
+				frame = 0;
+			}
+			dtFrameAccumulator = 0.0f; //Reset frame accumulator
 		}
-		dtFrameAccumulator = 0.0f; //Reset frame accumulator
+	}
+	else //else, we stand still
+	{
+		frame = 0;
 	}
 	
 	//getPlayerState()

@@ -63,7 +63,7 @@ protected:
 	//overloaded doUpdate
 	void doUpdate(const UpdateState &us);
 
-	void UpdateSpriteLayer(const UpdateState &us);
+	void UpdateSpriteLayer(const UpdateState us);
 
 private:
 	PCharState playerState = WALKDOWN;
