@@ -116,44 +116,24 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="../src/Game.cpp" />
-    <ClCompile Include="../src/GameMenu.cpp" />
-    <ClCompile Include="../src/GameScene.cpp" />
-    <ClCompile Include="../src/Joystick.cpp" />
-    <ClCompile Include="../src/MainMenuScene.cpp" />
-    <ClCompile Include="../src/MyButton.cpp" />
-    <ClCompile Include="../src/Player.cpp" />
     <ClCompile Include="..\..\..\oxygine-freetype\src\ResFontFT.cpp" />
-    <ClCompile Include="..\src\Enemy.cpp" />
-    <ClCompile Include="..\src\MyScene.cpp" />
     <ClCompile Include="../src/example.cpp" />
     <ClCompile Include="../src/main.cpp" />
-    <ClCompile Include="../src/res.cpp" />
     <ClCompile Include="..\..\..\oxygine-flow\src\flow\flow.cpp" />
     <ClCompile Include="..\..\..\oxygine-flow\src\flow\Scene.cpp" />
     <ClCompile Include="..\..\..\oxygine-flow\src\flow\Transition.cpp" />
-    <ClCompile Include="..\src\Rocket.cpp" />
-    <ClCompile Include="..\src\Unit.cpp" />
+    <ClCompile Include="..\src\CustomScene.cpp" />
+    <ClCompile Include="..\src\res.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="../src/Game.h" />
-    <ClInclude Include="../src/GameMenu.h" />
-    <ClInclude Include="../src/GameScene.h" />
-    <ClInclude Include="../src/Joystick.h" />
-    <ClInclude Include="../src/MainMenuScene.h" />
-    <ClInclude Include="../src/MyButton.h" />
-    <ClInclude Include="../src/Player.h" />
     <ClInclude Include="..\..\..\oxygine-freetype\src\ResFontFT.h" />
-    <ClInclude Include="..\src\Enemy.h" />
-    <ClInclude Include="..\src\MyScene.h" />
     <ClInclude Include="../src/example.h" />
-    <ClInclude Include="../src/res.h" />
     <ClInclude Include="..\..\..\oxygine-flow\src\flow\flow.h" />
     <ClInclude Include="..\..\..\oxygine-flow\src\flow\Scene.h" />
     <ClInclude Include="..\..\..\oxygine-flow\src\flow\Transition.h" />
     <ClInclude Include="..\..\..\oxygine-flow\src\oxygine-flow.h" />
-    <ClInclude Include="..\src\Rocket.h" />
-    <ClInclude Include="..\src\Unit.h" />
+    <ClInclude Include="..\src\CustomScene.h" />
+    <ClInclude Include="..\src\res.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

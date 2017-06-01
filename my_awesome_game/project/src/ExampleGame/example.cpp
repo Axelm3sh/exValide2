@@ -1,11 +1,10 @@
 #include "oxygine-framework.h"
 #include "oxygine-sound.h"
 #include "res.h"
-//#include "Game.h"
-//#include "MainMenuScene.h"
-//#include "GameScene.h"
-//#include "GameMenu.h"
-#include "CustomScene.h"
+#include "Game.h"
+#include "MainMenuScene.h"
+#include "GameScene.h"
+#include "GameMenu.h"
 #include "ResFontFT.h"
 using namespace oxygine;
 
@@ -27,7 +26,7 @@ void example_init()
     res::load();
 
 	flow::init();
-    //create all scenes/stages 
+    //create all scenes
     GameMenu::instance = new GameMenu;
     GameScene::instance = new GameScene;
     MainMenuScene::instance = new MainMenuScene;

@@ -1,7 +1,7 @@
 #include "Player.h"
-#include "Game.h"
-#include "res.h"
-#include "Joystick.h"
+#include "../Game.h"
+#include "../res.h"
+#include "../Joystick.h"
 #include "Rocket.h"
 
 Player::Player(): _lastRocketSpawn(0)

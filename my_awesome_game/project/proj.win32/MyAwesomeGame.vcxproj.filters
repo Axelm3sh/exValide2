@@ -21,34 +21,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="../src/Game.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="../src/GameMenu.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="../src/GameScene.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="../src/Joystick.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="../src/MainMenuScene.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="../src/MyButton.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="../src/Player.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="../src/example.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="../src/main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="../src/res.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\oxygine-flow\src\flow\flow.cpp">
@@ -60,48 +36,18 @@
     <ClCompile Include="..\..\..\oxygine-flow\src\flow\Transition.cpp">
       <Filter>oxygine-flow</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\MyScene.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\oxygine-freetype\src\ResFontFT.cpp">
       <Filter>oxygine-freetype</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Enemy.cpp">
+    <ClCompile Include="..\src\res.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Rocket.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Unit.cpp">
+    <ClCompile Include="..\src\CustomScene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="../src/Game.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="../src/GameMenu.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="../src/GameScene.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="../src/Joystick.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="../src/MainMenuScene.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="../src/MyButton.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="../src/Player.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="../src/example.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="../src/res.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\oxygine-flow\src\oxygine-flow.h">
@@ -116,19 +62,13 @@
     <ClInclude Include="..\..\..\oxygine-flow\src\flow\Transition.h">
       <Filter>oxygine-flow</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\MyScene.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\oxygine-freetype\src\ResFontFT.h">
       <Filter>oxygine-freetype</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Rocket.h">
+    <ClInclude Include="..\src\res.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Unit.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Enemy.h">
+    <ClInclude Include="..\src\CustomScene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

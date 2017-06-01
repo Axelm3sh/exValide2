@@ -1,8 +1,8 @@
 #include "Game.h"
 #include "Joystick.h"
-#include "Player.h"
+#include "Depricated\Player.h"
 #include "res.h"
-#include "Enemy.h"
+#include "Depricated\Enemy.h"
 
 Game::Game()
 {

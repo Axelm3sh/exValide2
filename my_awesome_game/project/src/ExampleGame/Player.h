@@ -1,5 +1,5 @@
 #pragma once
-#include "Unit.h"
+#include "../Unit.h"
 
 DECLARE_SMART(Player, spPlayer);
 class Player: public Unit

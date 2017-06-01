@@ -1,6 +1,6 @@
 #include "Rocket.h"
-#include "res.h"
-#include "Game.h"
+#include "../res.h"
+#include "../Game.h"
 #include "Enemy.h"
 
 Rocket::Rocket(const Vector2& dir): _dir(dir)
