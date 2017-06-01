@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<resources>
+	<set path = "images" />
+	<atlas>
+		<image id="P_SS" file="Players_SpriteSheet.png" cols = "27" rows = "12" />
+	</atlas>
+	
+	<set path = "images/ui" />
+	<atlas>
+		<image file="joystick.png" />
+		<image file="finger.png" />
+		<image file="play.png" />
+		<image file="logo2.png" />
+		<image file="menu.png" />
+		<image file="box9.png" />
+		<image file="bg.jpg" />
+		<image file="buttons.png" rows="5" cols="2"/>
+	
+	<set path = "images/background" />
+	<atlas>
+		<image file="BG_Backdrops.png" cols = "4" rows = "4" />
+		<image id= "TilesAndMasks" file="BG_Tiles_And_Masks.png" cols = "8" rows = "15" />
+	</atlas>
+	
+	<set path = "fonts" />
+	<font file="main.fnt" />
+	<ftfont file = "verdana.ttf"/>
+</resources>
