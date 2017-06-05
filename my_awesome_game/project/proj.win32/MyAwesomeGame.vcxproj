@@ -124,6 +124,9 @@
     <ClCompile Include="..\..\..\oxygine-flow\src\flow\Transition.cpp" />
     <ClCompile Include="..\src\CustomScene.cpp" />
     <ClCompile Include="..\src\res.cpp" />
+    <ClCompile Include="..\src\Tile.cpp" />
+    <ClCompile Include="..\src\WorldActor.cpp" />
+    <ClCompile Include="..\src\WorldScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\oxygine-freetype\src\ResFontFT.h" />
@@ -134,6 +137,9 @@
     <ClInclude Include="..\..\..\oxygine-flow\src\oxygine-flow.h" />
     <ClInclude Include="..\src\CustomScene.h" />
     <ClInclude Include="..\src\res.h" />
+    <ClInclude Include="..\src\Tile.h" />
+    <ClInclude Include="..\src\WorldActor.h" />
+    <ClInclude Include="..\src\WorldScene.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

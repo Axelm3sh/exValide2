@@ -5,7 +5,7 @@
 //#include "MainMenuScene.h"
 //#include "GameScene.h"
 //#include "GameMenu.h"
-#include "CustomScene.h"
+#include "WorldScene.h"
 #include "ResFontFT.h"
 using namespace oxygine;
 
@@ -28,12 +28,16 @@ void example_init()
 
 	flow::init();
     //create all scenes/stages 
-    GameMenu::instance = new GameMenu;
+    /*GameMenu::instance = new GameMenu;
     GameScene::instance = new GameScene;
-    MainMenuScene::instance = new MainMenuScene;
+    MainMenuScene::instance = new MainMenuScene;*/
+	WorldScene::instance = new WorldScene;
 
     //show main menu
-    flow::show(MainMenuScene::instance);
+    //flow::show(MainMenuScene::instance);
+
+	flow::show(WorldScene::instance);
+
 }
 
 void example_update()
@@ -45,9 +49,11 @@ void example_update()
 
 void example_destroy()
 {
-    MainMenuScene::instance = 0;
+    /*MainMenuScene::instance = 0;
     GameScene::instance = 0;
-    GameMenu::instance = 0;
+    GameMenu::instance = 0;*/
+
+	WorldScene::instance = 0;
 
     res::free();
 	ResFontFT::freeLibrary();

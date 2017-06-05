@@ -12,6 +12,8 @@ using namespace std;
 	within this scene.
 
 	Use with Oxygine-Flow to transition from scene to scene
+
+	To add actors to the scene use something like myClass->attachTo(MyScene->getView());
 */
 
 DECLARE_SMART(Scene, spScene);
