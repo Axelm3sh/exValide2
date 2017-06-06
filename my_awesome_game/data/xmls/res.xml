@@ -15,7 +15,8 @@
 		<image file="box9.png" />
 		<image file="bg.jpg" />
 		<image file="buttons.png" rows="5" cols="2"/>
-	
+	</atlas>
+
 	<set path = "images/background" />
 	<atlas>
 		<image file="BG_Backdrops.png" cols = "4" rows = "4" />

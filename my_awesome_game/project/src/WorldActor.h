@@ -5,8 +5,8 @@
 
 using namespace oxygine;
 
-const int HEIGHT = 5;
-const int WIDTH = 5;
+const int HEIGHT = 10;
+const int WIDTH = 15;
 
 class WorldActor : public Actor
 {
@@ -15,6 +15,8 @@ public:
 	~WorldActor();
 
 	void InitWorld();
+
+	void Cleanup();
 
 
 protected:

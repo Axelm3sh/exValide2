@@ -5,7 +5,7 @@
 
 using namespace oxygine;
 
-class Tile
+class Tile : public Actor
 {
 public:
 	Tile();
@@ -24,7 +24,7 @@ public:
 		//TODO - More tile data if needed?
 	};
 
-	void Init(ResAnim* image, TileData tileType, Vector2 size, Vector3 position, spActor attach);
+	void Init(AnimationFrame image, TileData tileType, Vector2 size, Vector2 position, spActor attach);
 
 
 protected:
@@ -32,7 +32,7 @@ protected:
 	spSprite tileImage;
 	TileData tileData;
 	Vector2 tileSize; //xy scale?
-	Vector3 tilePosition = 0; //X, Y, Z = depth for overlap/masks/decals?
+	Vector2 tilePosition; //X, Y
 	spActor attachTo;
 
 };
