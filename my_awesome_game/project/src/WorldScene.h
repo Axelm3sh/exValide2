@@ -1,6 +1,7 @@
-#pragma once
 #include "CustomScene.h"
 #include "WorldActor.h"
+
+using namespace oxygine;
 
 DECLARE_SMART(WorldScene, spWorldScene);
 class WorldScene : public CustomScene

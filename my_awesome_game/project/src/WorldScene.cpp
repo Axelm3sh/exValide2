@@ -1,6 +1,7 @@
 #include "WorldScene.h"
 #include "WorldActor.h"
 
+spWorldScene WorldScene::instance;
 
 WorldScene::WorldScene()
 {

@@ -30,7 +30,8 @@ void example_init()
     //create all scenes/stages 
     /*GameMenu::instance = new GameMenu;
     GameScene::instance = new GameScene;
-    MainMenuScene::instance = new MainMenuScene;*/
+    MainMenuScene::instance = new MainMenuScene;*/	
+
 	WorldScene::instance = new WorldScene;
 
     //show main menu
