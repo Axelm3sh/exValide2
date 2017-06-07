@@ -63,9 +63,9 @@ void WorldActor::Cleanup()
 	//TODO get rid of world in a clean way lol
 	while (!world.empty())
 	{
-		while(!world.begin()->empty)
+		while(!world.back().empty())
 		{ 
-			world.begin()->pop_back();
+			world.back().pop_back();
 		}
 		world.pop_back();
 	}
