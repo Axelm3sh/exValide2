@@ -1,7 +1,5 @@
 #include "Tile.h"
 
-
-
 Tile::Tile()
 {
 	//tileImage = NULL;
@@ -23,8 +21,8 @@ void Tile::Init(AnimationFrame image, TileData tileType, Vector2 size, Vector2 p
 	tileSize = size;
 	tilePosition = position;
 
-	tileImage = initActor(new Sprite, arg_animFrame = image, arg_position = tilePosition, arg_attachTo = attach);
+	tileImage = initActor(new MaskedSprite, arg_animFrame = image, arg_position = tilePosition, arg_attachTo = attach);
 	tileData = tileType;
 
-
+	
 }

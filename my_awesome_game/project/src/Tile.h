@@ -29,7 +29,7 @@ public:
 
 protected:
 
-	spSprite tileImage;
+	spMaskedSprite tileImage;
 	TileData tileData;
 	Vector2 tileSize; //xy scale?
 	Vector2 tilePosition; //X, Y
