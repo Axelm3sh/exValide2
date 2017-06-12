@@ -29,7 +29,8 @@ public:
 
 protected:
 
-	spMaskedSprite tileImage;
+	spSprite tileImageBottom; //Image below the masked sprite
+	spMaskedSprite tileImageTop; //Used for overlays
 	TileData tileData;
 	Vector2 tileSize; //xy scale?
 	Vector2 tilePosition; //X, Y

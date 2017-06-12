@@ -31,9 +31,20 @@ void WorldActor::InitWorld()
 		if (!worldsheet)
 		{
 			log::error("Error: could not find Tile images");
+			return;
 		}
-	
 	}
+	else
+	{
+		log::messageln("Tiles loaded!");
+	}
+
+	//TODO DEBUG backgroundcolor
+	spColorRectSprite bgColor = new ColorRectSprite;
+	bgColor->setColor(Color::BlueViolet);
+	bgColor->setSize(getParent()->getSize());
+	bgColor->attachTo(this);
+	
 
 	Vector2 defaultTileSize;
 	defaultTileSize.set(64.f,64.f);
@@ -51,7 +62,7 @@ void WorldActor::InitWorld()
 			
 			//DEBUG random tile TODO
 			const AnimationFrame& frame = worldsheet->getFrame(rand() % worldsheet->getColumns(), rand() % worldsheet->getRows());
-
+			
 			//Set tile data
 			world[i][j].Init(frame, Tile::DIRT, defaultTileSize, tileOffsets, this);
 		}

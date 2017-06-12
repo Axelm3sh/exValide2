@@ -12,7 +12,7 @@ Tile::Tile()
 Tile::~Tile()
 {
 	//Detatch sprite from parent, calls internal clean up
-	tileImage->detach();
+	tileImageBottom->detach();
 
 }
 
@@ -22,8 +22,15 @@ void Tile::Init(const AnimationFrame& image, TileData tileType, Vector2 size, Ve
 	tileSize = size;
 	tilePosition = position;
 
-	tileImage = initActor(new MaskedSprite, arg_resAnim = image, arg_position = tilePosition, arg_attachTo = attach);
+	tileImageBottom = initActor(new MaskedSprite, arg_resAnim = image, arg_position = tilePosition, arg_attachTo = attach);
 	tileData = tileType;
 
-	//tileImage->setMask();
+	//ResAnim* mask = res::ui.getResAnim("TilesAndMasks");
+	//spSprite maskFrame = new Sprite;
+
+	//int min = 13;
+
+	////maskFrame->setAnimFrame(mask, rand() % mask->getColumns(), min + (rand() % static_cast<int>(mask->getRows() - min)));
+	//maskFrame->setAnimFrame(mask, rand() % mask->getColumns(), (rand() % mask->getRows()) );
+	//tileImage->setMask(maskFrame, false);
 }
