@@ -13,16 +13,17 @@ Tile::~Tile()
 {
 	//Detatch sprite from parent, calls internal clean up
 	tileImage->detach();
+
 }
 
-void Tile::Init(AnimationFrame image, TileData tileType, Vector2 size, Vector2 position, spActor attach)
+void Tile::Init(const AnimationFrame& image, TileData tileType, Vector2 size, Vector2 position, spActor attach)
 {
 
 	tileSize = size;
 	tilePosition = position;
 
-	tileImage = initActor(new MaskedSprite, arg_animFrame = image, arg_position = tilePosition, arg_attachTo = attach);
+	tileImage = initActor(new MaskedSprite, arg_resAnim = image, arg_position = tilePosition, arg_attachTo = attach);
 	tileData = tileType;
 
-	
+	//tileImage->setMask();
 }

@@ -5,7 +5,7 @@
 
 using namespace oxygine;
 
-class Tile : public Actor
+class Tile
 {
 public:
 	Tile();
@@ -24,7 +24,7 @@ public:
 		//TODO - More tile data if needed?
 	};
 
-	void Init(AnimationFrame image, TileData tileType, Vector2 size, Vector2 position, spActor attach);
+	void Init(const AnimationFrame& image, TileData tileType, Vector2 size, Vector2 position, spActor attach);
 
 
 protected:

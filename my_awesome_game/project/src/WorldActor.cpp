@@ -10,6 +10,8 @@ WorldActor::WorldActor()
 WorldActor::~WorldActor()
 {
 	Cleanup();
+
+	this->detach();
 }
 
 void WorldActor::InitWorld()
@@ -47,7 +49,7 @@ void WorldActor::InitWorld()
 			tileOffsets.x = this->getX() + (defaultTileSize.x * i);
 			tileOffsets.y = this->getY() + (defaultTileSize.y * j);
 			
-			//DEBUG random tile
+			//DEBUG random tile TODO
 			const AnimationFrame& frame = worldsheet->getFrame(rand() % worldsheet->getColumns(), rand() % worldsheet->getRows());
 
 			//Set tile data
@@ -69,4 +71,10 @@ void WorldActor::Cleanup()
 		}
 		world.pop_back();
 	}
+
+
+	std::string msg = std::to_string(world.size());
+
+	log::messageln(msg.c_str());
+
 }

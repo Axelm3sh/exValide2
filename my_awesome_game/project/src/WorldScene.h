@@ -4,6 +4,7 @@
 using namespace oxygine;
 
 DECLARE_SMART(WorldScene, spWorldScene);
+DECLARE_SMART(WorldActor, spWorldActor);
 class WorldScene : public CustomScene
 {
 public:
@@ -15,6 +16,6 @@ public:
 private:
 	void onEvent(Event* ev);
 
-	WorldActor World;
+	spWorldActor World;
 };
 
