@@ -8,6 +8,8 @@ using namespace std;
 namespace res
 {
     extern Resources ui;
+	extern Resources playerSpr;
+	extern Resources worldSpr;
     void load();
     void free();
 }

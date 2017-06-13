@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<resources>
+
+	<set path = "images/background" />
+	<atlas>
+		<image file="BG_Backdrops.png" cols = "4" rows = "4" />
+		<image id= "TilesAndMasks" file="BG_Tiles_And_Masks.png" cols = "8" rows = "15" />
+	</atlas>
+</resources>

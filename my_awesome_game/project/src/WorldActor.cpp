@@ -17,6 +17,12 @@ WorldActor::~WorldActor()
 void WorldActor::InitWorld()
 {
 
+	//TODO DEBUG backgroundcolor
+	spColorRectSprite bgColor = new ColorRectSprite;
+	bgColor->setColor(Color::DarkOrchid);
+	bgColor->setSize(getParent()->getSize());
+	bgColor->attachTo(this);
+
 	//Simple Initialize 2D Array
 	world.resize(HEIGHT);
 	for (int i = 0; i < HEIGHT; i++)
@@ -24,10 +30,10 @@ void WorldActor::InitWorld()
 		world[i].resize(WIDTH);
 	}
 
-	ResAnim* worldsheet = res::ui.getResAnim("TilesAndMasks");
+	ResAnim* worldsheet = res::worldSpr.getResAnim("TilesAndMasks");
 	if (!worldsheet)
 	{
-		worldsheet = res::ui.getResAnim("BG_Tiles_And_Masks");
+		worldsheet = res::worldSpr.getResAnim("BG_Tiles_And_Masks");
 		if (!worldsheet)
 		{
 			log::error("Error: could not find Tile images");
@@ -39,11 +45,6 @@ void WorldActor::InitWorld()
 		log::messageln("Tiles loaded!");
 	}
 
-	//TODO DEBUG backgroundcolor
-	spColorRectSprite bgColor = new ColorRectSprite;
-	bgColor->setColor(Color::BlueViolet);
-	bgColor->setSize(getParent()->getSize());
-	bgColor->attachTo(this);
 	
 
 	Vector2 defaultTileSize;
